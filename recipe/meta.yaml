@@ -1,4 +1,4 @@
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: pymt_sedflux
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/mcflugen/pymt_sedflux/archive/v{{ version }}.tar.gz
-  sha256: 2638e6b7f307a533758f44b8e83ad25d1cd6180887b36bf6757f47f535946150
+  sha256: 97a211576a6799991b44c25e3415417d8e38733250eec3e100c41e87f6a09d84
 
 build:
-  number: 0
+  number: 1000
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
   skip: True  # [win]
 
@@ -27,12 +27,10 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - pymt
     - sedflux
 
 test:
   imports:
-    - pymt
     - pymt_sedflux
 
 about:
