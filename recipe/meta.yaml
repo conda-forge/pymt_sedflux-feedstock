@@ -1,4 +1,4 @@
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: pymt_sedflux
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/mcflugen/pymt_sedflux/archive/v{{ version }}.tar.gz
-  sha256: 97a211576a6799991b44c25e3415417d8e38733250eec3e100c41e87f6a09d84
+  sha256: 48a14582c81003dd8be024ec3dc2350bbc2cc8cffc72127b795f197eaf16ea52
 
 build:
   number: 1000
