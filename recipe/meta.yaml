@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/mcflugen/pymt_sedflux/archive/v{{ version }}.tar.gz
+  url: https://github.com/pymt-lab/pymt_sedflux/archive/v{{ version }}.tar.gz
   sha256: 48a14582c81003dd8be024ec3dc2350bbc2cc8cffc72127b795f197eaf16ea52
 
 build:
@@ -34,12 +34,12 @@ test:
     - pymt_sedflux
 
 about:
-  home: https://github.com/mcflugen/pymt_sedflux
+  home: https://github.com/pymt-lab/pymt_sedflux
   license: MIT
   license_family: MIT
   license_file: LICENSE
   summary: sedflux components wrapped as PyMT plugins.
-  dev_url: https://github.com/mcflugen/pymt_sedflux
+  dev_url: https://github.com/pymt-lab/pymt_sedflux
 
 extra:
   recipe-maintainers:
