@@ -1,7 +1,7 @@
 About pymt_sedflux
 ==================
 
-Home: https://github.com/mcflugen/pymt_sedflux
+Home: https://github.com/pymt-lab/pymt_sedflux
 
 Package license: MIT
 
