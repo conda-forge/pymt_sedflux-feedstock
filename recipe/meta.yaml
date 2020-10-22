@@ -1,4 +1,4 @@
-{% set version = "0.1.3" %}
+{% set version = "0.2.0" %}
 
 package:
   name: pymt_sedflux
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://github.com/pymt-lab/pymt_sedflux/archive/v{{ version }}.tar.gz
-  sha256: 4fccaedb12091443a83e0274ca6d93e82a7ea84a138aef7f1e3d605dbbc29994
+  sha256: 38c335b0b84b0dd5dccf9e4516b935eef44f6028d430e9627b7bd7f0e5b7b58f
 
 build:
-  number: 1002
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  skip: True  # [win]
+  skip: True  # [win or py<37]
 
 requirements:
   build:
@@ -21,18 +21,20 @@ requirements:
     - pip
     - cython
     - numpy
-    - model_metadata
     - sedflux
-    - pathlib  # [py27]
   run:
     - python
+    - setuptools
     - {{ pin_compatible('numpy') }}
     - sedflux
-    - pathlib  # [py27]
 
 test:
-  imports:
-    - pymt_sedflux
+  requires:
+    - bmi-tester
+  commands:
+    - bmi-test pymt_sedflux:Avulsion -vvv
+    - bmi-test pymt_sedflux:Plume -vvv
+    - bmi-test pymt_sedflux:Subside -vvv
 
 about:
   home: https://github.com/pymt-lab/pymt_sedflux
